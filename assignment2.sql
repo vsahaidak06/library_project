@@ -198,45 +198,6 @@ INSERT INTO loan (customer_id, book_id, loan_date, due_date, return_date) VALUES
 
 
 
-
-CREATE TABLE customer2loan (
-           customer_id INTEGER,
-           loan_id INTEGER,
-           PRIMARY KEY (customer_id, loan_id),
-           FOREIGN KEY (customer_id) REFERENCES customer(id),
-           FOREIGN KEY (loan_id) REFERENCES loan(id)
-);
-
-INSERT INTO customer2loan (customer_id, loan_id) VALUES
-     (1, 17),
-     (2, 17),
-     (3, 16),
-     (3, 15),
-     (4, 14),
-     (5, 14),
-     (6, 13),
-     (7, 12),
-     (9, 11),
-     (8, 10),
-     (9, 9),
-     (10, 8),
-     (11, 8),
-     (12, 7),
-     (12, 6),
-     (13, 5),
-     (14, 4),
-     (15, 4),
-     (15, 3),
-     (16, 2),
-     (17, 1),
-     (17, 6);
-
-
-
-
-
-
-
 CREATE TABLE book2loan (
            book_id INTEGER,
            loan_id INTEGER,
